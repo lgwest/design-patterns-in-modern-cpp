@@ -17,6 +17,8 @@ struct Product
   Size size;
 };
 
+
+// Not used, see Better Filter instead
 struct ProductFilter
 {
   typedef vector<Product*> Items;
