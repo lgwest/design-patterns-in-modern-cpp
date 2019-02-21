@@ -13,3 +13,9 @@ Release v1.0 corresponds to the code in the published book, without corrections 
 ## Contributions
 
 See the file Contributing.md for more information on how you can contribute to this repository.
+
+------
+# Some modifications done for ubuntu 18:04 and cmake
+
+* install boost: `apt-get install libboost-all-dev`
+* using [Catch2](https://github.com/catchorg/Catch2/tree/master/single_include/catch2/catch.hpp) instead of gtest.

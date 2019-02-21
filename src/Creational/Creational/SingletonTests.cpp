@@ -1,5 +1,7 @@
 #include "Singleton.hpp"
-#include <gtest/gtest.h>
+
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
 
 //TEST(DatabaseTests, IsSingletonTest)
 //{
@@ -9,7 +11,9 @@
 //  ASSERT_EQ(1, db2.instance_count);
 //}
 
-TEST(RecordFinderTests, SingletonTotalPopulationTest)
+
+
+TEST_CASE("RecordFinderTests", "SingletonTotalPopulationTest")
 {
   SingletonRecordFinder rf;
   std::vector<std::string> names{ "Seoul", "Mexico City" };
@@ -17,16 +21,11 @@ TEST(RecordFinderTests, SingletonTotalPopulationTest)
   EXPECT_EQ(17500000 + 17400000, tp);
 }
 
-TEST(RecordFinderTests, DependantTotalPopulationTest)
+TEST_CASE("RecordFinderTests", "DependantTotalPopulationTest")
 {
   DummyDatabase db{};
   ConfigurableRecordFinder rf{ db };
-  EXPECT_EQ(4, rf.total_population(
+  REQUIRE(4 == rf.total_population(
     std::vector<std::string>{"alpha", "gamma"}));
 }
 
-int dsfmain(int ac, char* av[])
-{
-  testing::InitGoogleTest(&ac, av); 
-  return RUN_ALL_TESTS();
-}

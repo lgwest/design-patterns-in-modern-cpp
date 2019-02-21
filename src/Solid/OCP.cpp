@@ -147,7 +147,7 @@ int main()
   SizeSpecification large(Size::large);
   AndSpecification<Product> green_and_large(green, large);
 
-  //auto big_green_things = bf.filter(all, green_and_large);
+  auto big_green_things = bf.filter(all, green_and_large);
 
   auto spec = ColorSpecification{Color::green} &&
               SizeSpecification{Size::large};

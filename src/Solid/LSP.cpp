@@ -46,7 +46,7 @@ void process(Rectangle& r)
     << ", got " << r.area() << std::endl;
 }
 
-int main342342()
+int main()
 {
   Rectangle r{ 3, 4 };
   process(r);
