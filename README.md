@@ -1,3 +1,6 @@
+pattern page, seems good:
+https://refactoring.guru/design-patterns/mediator/cpp/example
+
 # Apress Source Code
 
 This repository accompanies [*Design Patterns in Modern C++*](http://www.apress.com/9781484236024) by Dmitri Nesteruk (Apress, 2018).
