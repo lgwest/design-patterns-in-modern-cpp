@@ -6,7 +6,7 @@ using namespace std;
 #include "person.h"
 #include "chatroom.h"
 
-int main__()
+int main()
 {
   ChatRoom room;
   
